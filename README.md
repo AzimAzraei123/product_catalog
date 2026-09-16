@@ -1,6 +1,6 @@
 # Product Catalog App
 
-A simple Flutter app that shows a list of products from the [DummyJSON](https://dummyjson.com) API. You can scroll through products, search for one, and tap on any product to see its full details.
+A simple Flutter app that shows a list of products from the [DummyJSON](https://dummyjson.com) API.
 
 ## Stack
 
@@ -30,6 +30,11 @@ flutter run
 **A quick note:** When I first set up this project, my installed Android Studio didn't support the newer Android build tools that Flutter uses by default. Instead of downgrading things and breaking other parts, I kept Flutter's normal settings and just added a flag that tells Flutter to skip that specific version check:
 ```bash
 flutter run --android-skip-build-dependency-validation
+```
+
+**A quick note:**- Occasional image rendering flicker on Windows desktop during fast scrolling, related to Flutter's Impeller renderer on this platform — not an issue with the app's image-loading code. Can be avoided by running with `--no-enable-impeller`.
+```bash
+flutter run --no-enable-impeller
 ```
 
 ### Run the tests
